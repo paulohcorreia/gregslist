@@ -1,0 +1,144 @@
+/*
+My experience: This exercise took me a lot more time than needed. I have spent some time to figure out how to make every single detail.So I went to revising the theory about display, positioning and layout. 
+May be helpful but I spent a lot of time. 
+
+Remarks: 
+1. I favored readability over concision. What is most important: DRY principle (do not repeat yourself) or readability? Can we have both?
+2. Why do we place font-family on the body ruleset instead of @import on the stylesheet?
+
+
+*/
+
+/*CSS Reset*/
+* {
+	box-sizing: border-box; 
+	margin: 0;
+  	padding: 0;
+}
+
+
+body {
+	padding: 80px;
+	/*Notice that the font family applies to all elements.*/
+	font-family: "Roboto", sans-serif; 
+}
+
+/* Layout*/
+
+.page-element {
+	/*border: 5px solid pink;*/
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+}
+
+.container {
+	padding-left: 60px;
+	padding-right: 60px;
+	max-width: 100%;
+}
+
+.row {
+	/*border: 2px solid blue;*/
+	margin-top: 10px;
+}
+
+/*Page Elements*/
+
+/*------------------------------------- Header-----------------------------------*/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	background-color: #eee;
+	border-bottom: 1px solid #ddd;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a:hover {
+	color: gray;
+}
+
+.brand {
+	position: absolute;
+	margin-top: 1rem;
+	line-height: 15px;
+	left: 2rem;
+}
+
+h1.brand {
+	font-weight: normal;
+	margin: -3px 0;
+  	padding: 0;
+  	font-size: 18px;
+}
+
+nav.nav-header {
+	text-align: right;
+	position: relative;
+	white-space: nowrap;
+	line-height: 10px;
+}
+
+nav.nav-header ul {
+	display: inline-block;
+	margin: 0;
+  	padding: 0;
+}
+
+nav.nav-header li {
+	display: inline-block;
+}
+
+
+/*------------------------------Search Bar----------------------------------*/
+
+.search-bar {
+	display: inline-block;
+	position: relative;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form.search-bar input[type=text] {
+	display: inline-block;
+}
+
+form.search-bar button[type=button] {
+	display: inline-block;
+}
+
+form.search-bar button[type=button] img {
+	width: 10px;
+}
+
+/*------------------------------Search Navigation----------------------------*/
+
+div.search-nav {
+	position: relative;
+}
+
+div.search-nav button[type=button]  {
+	display: inline-block;
+}
+
+div.search-result {
+	position: relative;
+}
+
+/*------------------------------Search Result----------------------------*/
+
+div.search-result ul {
+	list-style-type: none;
+	padding: 0px;
+}
