@@ -1,1 +1,3 @@
-#Gregslist \n List for Thinkful Course.
+#Gregslist 
+
+List for Thinkful Course.
